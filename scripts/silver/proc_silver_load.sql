@@ -1,3 +1,22 @@
+/*
+==========================================
+Stored Procedure: Load Silver Layer (Bronze --> Silver)
+==========================================
+
+Script Purpose: 
+ 	This stored procedure loads data into the 'silver' schema from bronze layer.
+	it performs the following actions:
+		- Truncates the silver tables before loading the data.
+		- Uses the 'BULK INSERT' command to load data from csv files to bronze tables.
+Parameters:
+	None.
+	This stored procedure does not accept any parameters or return any values.
+Usage Example:
+	EXEC bronze.load_bronze;
+============================================================================
+*/
+
+
 Create or alter PROCEDURE  silver.load_silver as 
 Begin 
 	 Declare @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME
