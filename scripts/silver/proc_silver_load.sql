@@ -7,12 +7,12 @@ Script Purpose:
  	This stored procedure loads data into the 'silver' schema from bronze layer.
 	it performs the following actions:
 		- Truncates the silver tables before loading the data.
-		- Uses the 'BULK INSERT' command to load data from csv files to bronze tables.
+		- Uses the 'INSERT' command to load data from bronze layer tables to silver layer tables.
 Parameters:
 	None.
 	This stored procedure does not accept any parameters or return any values.
 Usage Example:
-	EXEC bronze.load_bronze;
+	EXEC silver.load_silver;
 ============================================================================
 */
 
